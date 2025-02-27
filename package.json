@@ -1,0 +1,25 @@
+{
+  "name": "escrows",
+  "version": "1.0.0",
+  "description": "Smart Contracts Escrow System of Deep Funding",
+  "license": "MIT",
+  "author": "SingularityNET Foundation",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "5.0.0",
+    "@nomicfoundation/hardhat-verify": "2.0.12",
+    "@nomiclabs/hardhat-solhint": "4.0.1",
+    "@openzeppelin/contracts": "3.2.0",
+    "hardhat": "2.22.19",
+    "hardhat-contract-sizer": "2.10.0"
+  },
+  "dependencies": {
+    "dotenv": "16.4.7",
+    "web3": "4.16.0"
+  },
+  "scripts": {
+    "c": "npx hardhat compile --show-stack-traces",
+    "t": "npx hardhat test",
+    "cov": "npx hardhat coverage",
+    "l": "solhint --max-warnings 0 \"contracts/**/*.sol\""
+  }
+}
