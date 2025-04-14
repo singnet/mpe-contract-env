@@ -2,16 +2,13 @@ async function main() {
     const [deployer] = await ethers.getSigners();
     console.log("Deploying contracts with the account:", deployer.address);
   
+    const Registry = await ethers.getContractFactory("Registry");
   
-    const tokenAddress = "0xNewTokenAddress";
-  
-    const MultiPartyEscrow = await ethers.getContractFactory("MultiPartyEscrow");
-  
-    const multiPartyEscrow = await MultiPartyEscrow.deploy(
+    const registry = await Registry.deploy(
         tokenAddress
     );
   
-    console.log("Contract deployed");
+    console.log("Contract deployed", await registry.getAddress());
   }
   
   main()
