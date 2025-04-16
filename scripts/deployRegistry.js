@@ -4,9 +4,7 @@ async function main() {
   
     const Registry = await ethers.getContractFactory("Registry");
   
-    const registry = await Registry.deploy(
-        tokenAddress
-    );
+    const registry = await Registry.deploy();
   
     console.log("Contract deployed", await registry.getAddress());
   }
